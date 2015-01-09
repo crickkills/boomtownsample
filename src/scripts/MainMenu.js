@@ -10,32 +10,40 @@
 
 	BOOMTEST.mainMenu = (function() {
 		var trigger = '.site-header__menu-trigger',
-			navItems = '.main-nav > li',
+			navItems = '.main-nav > li > a',
 			$body = $('body'),
 			$document = $(document),
 			$modal = $('.slidable-content__modal'),
+			$scroller = $('.slidable-content'),
 			className = 'body--menu-active';
 
 		// toggle body class and show/hide modal
-		function toggleAndFade() {
+		function toggleAndFade(callback) {
 			$body.toggleClass(className);
 			if($body.hasClass(className)){
-				$modal.fadeIn();
+				$modal.fadeIn(500, callback);
 			}else{
-				$modal.fadeOut();
+				$modal.fadeOut(500, callback);
 			}
 		}
 
 		// main menu trigger and item click event handler
 		function handleTriggerClick(evt) {
 			toggleAndFade();
-			evt.stopPropagation();
+			evt.preventDefault();
 		}
 
 		// nav item trigger click event handler
 		function handleItemClick(evt) {
-			toggleAndFade();
+			var $target = $($(evt.target).closest('a').attr('href'));
+
+			function callback() {
+				//setTimeout(function() {$scroller.scrollTop($target.offset().top - 60)}, 400);
+			}
+
+			toggleAndFade(callback);
 			evt.stopPropagation();
+			return false;
 		}
 
 		// setup event listeners

@@ -11,7 +11,7 @@ var BOOMTEST = BOOMTEST || {};
  * Ensuring all ressources utilized by the project are under 1 namespace
  *------------------------------------------------------------------*/
 
-(function() {
+(function($) {
 
     BOOMTEST.namespace = function() {
         var a = arguments, o = null, i, j, d, l=a.length, dl;
@@ -27,4 +27,4 @@ var BOOMTEST = BOOMTEST || {};
         return o;
     };
 
-}());
+}(jQuery));
