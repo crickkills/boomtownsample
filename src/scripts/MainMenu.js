@@ -29,7 +29,6 @@
 		// main menu trigger and item click event handler
 		function handleTriggerClick(evt) {
 			toggleAndFade();
-			evt.preventDefault();
 		}
 
 		// nav item trigger click event handler
