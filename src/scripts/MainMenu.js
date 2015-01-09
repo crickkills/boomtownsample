@@ -43,7 +43,6 @@
 
 			toggleAndFade(callback);
 			evt.stopPropagation();
-			return false;
 		}
 
 		// setup event listeners
