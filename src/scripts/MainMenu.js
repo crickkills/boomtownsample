@@ -19,7 +19,7 @@
 		// toggle body class and show/hide modal
 		function toggleAndFade() {
 			$body.toggleClass(className);
-			if($body.is('.' + className)){
+			if($body.hasClass(className)){
 				$modal.fadeIn();
 			}else{
 				$modal.fadeOut();
@@ -29,11 +29,13 @@
 		// main menu trigger and item click event handler
 		function handleTriggerClick(evt) {
 			toggleAndFade();
+			evt.stopPropagation();
 		}
 
 		// nav item trigger click event handler
 		function handleItemClick(evt) {
 			toggleAndFade();
+			evt.stopPropagation();
 		}
 
 		// setup event listeners
