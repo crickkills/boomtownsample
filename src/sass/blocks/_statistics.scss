@@ -1,0 +1,33 @@
+.statistics {
+	@extend .module;
+
+	&__header {
+		@extend .module__header;
+	}
+
+	&__header-title {
+		@extend .module__header-title;
+	}
+
+	&__body {
+		@extend .module__body;
+	}
+
+	&__table {
+		@extend .table;
+		@extend .table-striped;
+	}
+
+	&__sorter {
+		color: $text--medium-gray;
+		font-size: 12px;
+	}
+
+	&--positive {
+		color: $primary--green;
+	}
+
+	&--negative {
+		color: $primary--red;
+	}
+}

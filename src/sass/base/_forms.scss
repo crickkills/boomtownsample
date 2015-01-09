@@ -1,0 +1,75 @@
+.onoffswitch {
+    position: relative; 
+    width: 48px;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+.onoffswitch__checkbox {
+    display: none;
+}
+.onoffswitch__label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 0;
+}
+.onoffswitch__inner {
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
+    -moz-transition: margin 0.2s;
+    -webkit-transition: margin 0.2s;
+    -o-transition: margin 0.2s;
+    transition: margin 0.2s;
+}
+.onoffswitch__inner:before, .onoffswitch__inner:after {
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 20px; 
+    padding: 0; 
+    line-height: 20px;
+    font-size: 12px; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+.onoffswitch__inner:before {
+    content: "✓";
+    font-family: $font--normal;
+    padding-left: 10px;
+    background-color: #679900; 
+    color: #FFFFFF;
+}
+.onoffswitch__inner:after {
+    content: "X";
+    padding-right: 10px;
+    background-color: #CCCCCC; 
+    color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch__switch {
+    display: block; 
+    width: 13px; 
+    margin: 4px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    right: 27px;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.onoffswitch__checkbox:checked + .onoffswitch__label .onoffswitch__inner {
+    margin-left: 0;
+}
+.onoffswitch__checkbox:checked + .onoffswitch__label .onoffswitch__switch {
+    right: 0px; 
+}

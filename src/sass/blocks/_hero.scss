@@ -1,0 +1,25 @@
+.hero {
+	@extend .rounded;
+	@extend .text-hidden;
+	height: 496px;
+	margin-bottom: 30px;
+	background: url(../img/hero.jpg) center center no-repeat;
+}
+
+@media (max-width: $screen-md-max) {
+	.hero {
+		max-height: 300px;
+	}
+}
+
+@media (max-width: 743px) {
+	.hero {
+		background: none;
+		text-indent: 0;
+		overflow: auto;
+		white-space: normal;
+		text-align: center;
+		height: auto;
+		max-height: auto;
+	}
+}

@@ -1,0 +1,23 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "indent": false,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "boss": true,
+    "eqnull": true,
+    "browser": true,
+    "smarttabs": true,
+    "-W099": true,
+    "expr": true,
+    "globals": {
+        "BOOMTEST": true,
+        "$": true,
+        "jQuery": true,
+        "console": true
+    }
+}

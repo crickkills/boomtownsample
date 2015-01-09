@@ -1,0 +1,117 @@
+.team {
+	@extend .row;
+	@extend .block;
+	padding: 0;
+	list-style: none;
+
+	&__list-item {
+		@extend .col-md-4;
+		@extend .col-sm-4;
+		@extend .col-xs-12;
+	}
+
+	&__member {
+		@extend .shadow;
+		@extend .rounded;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 30px;
+		background: #fff;
+		min-height: 300px;
+	}
+
+	&__member-image {
+		max-width: 100%;
+		align: center;
+		margin-bottom: 14px;
+
+		&--small {
+			display: none;
+		}
+	}
+
+	&__member-name {
+		@extend .block;
+		padding: 0 15px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&__member-alias {
+		@extend .block;
+		padding: 0 15px;
+		text-align: center;
+		font-size: 12px;
+		font-weight: 600;
+		color: $primary--blue;
+		margin-bottom: 15px;
+	}
+
+	&__member-description {
+		padding: 0 15px;
+		margin-bottom: 50px;
+		text-align: center;
+		font-size: 11px;
+		line-height: 1.6;
+		color: $text--medium-gray;
+	}
+
+	&__member-social-list {
+		list-style: none;
+		position: relative;
+		height: 52px;
+		background: $primary--orange;
+		padding:0 10px;
+	}
+
+	&__member-social-item {
+		@extend .block;
+		@extend .col-lg-4;
+		@extend .col-md-4;
+		@extend .col-sm-4;
+		@extend .col-xs-4;
+		text-align: center;
+		margin-top: 7px;
+	}
+
+	&__member-social-icon {
+		@extend .block;
+		@extend .text-hidden;
+		background: url(../img/icon-sprite.png);
+		background-repeat: no-repeat;
+		width: 36px;
+		height: 36px;
+		margin: 0 auto;
+
+		&--facebook {
+			@extend .team__member-social-icon;
+			background-position: -25px 0;
+		}
+
+		&--twitter {
+			@extend .team__member-social-icon;
+			background-position: -61px 0;
+		}
+
+		&--github {
+			@extend .team__member-social-icon;
+			background-position: -97px 0;
+		}
+	}
+}
+
+@media (max-width: $screen-sm-max) {
+	.team__member {
+		min-height: 200px;
+	}
+
+	.team__member-image {
+		display: none;
+	}
+
+	.team__member-image--small {
+		display: block;
+		margin: 20px auto;
+	}
+}

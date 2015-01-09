@@ -1,0 +1,107 @@
+.settings {
+	@extend .col-lg-12;
+	@extend .col-md-4;
+	@extend .col-sm-4;
+
+	&__layout {
+		@extend .module;
+	}
+
+	&__header {
+		@extend .module__header--borderless;
+	}
+
+	&__header-title {
+		@extend .module__header-title--sidebar;
+	}
+
+	&__body {
+		@extend .module__body--full-height;
+	}
+
+	&__panel {
+		border-bottom: 1px solid $border--light-gray;
+		padding: 10px 0;
+
+		&:nth-last-child(1) {
+			border-bottom: none;
+		}
+	}
+
+	&__list {
+		@extend .clearfix;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		&--toggles {
+			@extend .settings__list;
+		}
+
+		&--checkboxes {
+			@extend .settings__list;
+		}
+
+		&--radios {
+			@extend .settings__list;
+		}
+	}
+
+	&__list-item {
+		@extend .clearfix;
+		line-height: 2;
+
+		&--toggles {
+			@extend .settings__list-item;
+			line-height: 2.4;
+		}
+
+		&--checkboxes {
+			@extend .settings__list-item;
+			float: left;
+			width: 50%;
+		}
+
+		&--radios {
+			@extend .settings__list-item;
+			float: left;
+		}
+	}
+
+	&__label {
+		@extend .block;
+		font-size: 11px;
+		color: $text--medium-gray;
+
+		&--radios {
+			@extend .settings__label;
+			@extend .inline-block;
+			float: left;
+			margin-right: 10px;
+		}
+	}
+	&__label-span {
+		@extend .inline-block;
+		padding-left: 4px;
+	}
+
+	&__panel-header {
+		@extend .block;
+		font-size: 11px;
+		color: $text--medium-gray;
+		margin: 0 0 10px 0;
+	}
+
+	&__checkbox-toggle {
+		float: right;
+		margin-top: 3px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.settings {
+		margin-left: 15px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
